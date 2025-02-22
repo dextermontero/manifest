@@ -7,6 +7,6 @@ spec:
     app: ui-portfolio
   ports:
   - port: 8080
-    protocol: TCP
     targetPort: 8080
-  type: LoadBalancer
+    nodePort: 30080
+  type: NodePort
