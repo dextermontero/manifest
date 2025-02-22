@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ui-portfolio-application
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/dextermontero/manifest.git
+    targetRevision: HEAD
+    path: ui-portfolio
+  destination: 
+    server: https://kubernetes.default.svc
+    namespace: ui-portfolio
+
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+    automated:
+      selfHeal: true
+      prune: true
