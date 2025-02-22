@@ -7,5 +7,6 @@ spec:
     app: ui-portfolio
   ports:
   - port: 80
-    protocol: TCP
     targetPort: 3000
+    nodePort: 30000
+  type: NodePort
