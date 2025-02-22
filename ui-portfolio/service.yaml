@@ -7,6 +7,6 @@ spec:
     app: ui-portfolio
   ports:
   - port: 80              # Exposing port 80 on the service (optional: choose based on your needs)
-    targetPort: 9090       # Ensure the container is listening on this port
-    nodePort: 30081        # External port to expose the service
+    targetPort: 3000       # Ensure the container is listening on this port
+    nodePort: 30080        # External port to expose the service
   type: NodePort

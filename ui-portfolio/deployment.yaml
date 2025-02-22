@@ -16,4 +16,4 @@ spec:
       - name: ui-portfolio-container
         image: dextermontero/ui-portfolio:latest
         ports:
-        - containerPort: 9090
+        - containerPort: 3000
