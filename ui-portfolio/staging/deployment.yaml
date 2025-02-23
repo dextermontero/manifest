@@ -12,7 +12,7 @@ spec:
       labels:
         app: ui-portfolio
     spec:
-      container:
+      containers:
       - name: ui-portfolio-container
         image: dextermontero/ui-portfolio:latest
         ports:
