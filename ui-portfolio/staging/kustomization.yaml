@@ -5,4 +5,4 @@ resources:
 - service.yaml
 images:
   - name: dextermontero/ui-portfolio
-    newTag: "latest"
+    newTag: "v0.0"
