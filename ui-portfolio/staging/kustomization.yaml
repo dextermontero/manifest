@@ -3,5 +3,5 @@ kind: Kustomization
 resources:
 - deployment.yaml
 images:
-  -name: dextermontero/ui-portfolio
-  newTag: "latest"
+  - name: dextermontero/ui-portfolio
+    newTag: "latest"
