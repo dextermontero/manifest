@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: ui-portfolio-container
-        image: dextermontero/ui-portfolio:v0.0
+        image: dextermontero/ui-portfolio:latest
         imagePullPolicy: Always
         ports:
         - name: http
