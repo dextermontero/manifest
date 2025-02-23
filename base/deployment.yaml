@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ui-portfolio-development
+spec:
+  selector:
+  matchLabels:
+    app: ui-portfolio
+  template:
+  metadata:
+    labels:
+      app: ui-portfolio
+  spec:
+    container:
+    - name: ui-portfolio-container
+      image: dextermontero/ui-portfolio:latest
+      ports:
+      - name: http
+        containerPort: 3000
+        protocol: TCP
+
+# kind: Deployment
+# metadata:
+#   name: ui-portfolio-development
+# spec:
+#   selector:
+#     matchLabels:
+#       app: ui-portfolio
+#   replicas: 2
+#   template:
+#     metadata:
+#       labels:
+#         app: ui-portfolio
+#     spec:
+#       containers:
+#       - name: ui-portfolio-container
+#         image: dextermontero/ui-portfolio:latest
+#         ports:
+#         - containerPort: 8081
