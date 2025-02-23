@@ -4,17 +4,18 @@ metadata:
   name: ui-portfolio-development
 spec:
   selector:
-  matchLabels:
-    app: ui-portfolio
-  template:
-  metadata:
-    labels:
+    matchLabels:
       app: ui-portfolio
-  spec:
-    container:
-    - name: ui-portfolio-container
-      image: dextermontero/ui-portfolio:latest
-      ports:
-      - name: http
-        containerPort: 3000
-        protocol: TCP
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: ui-portfolio
+    spec:
+      container:
+      - name: ui-portfolio-container
+        image: dextermontero/ui-portfolio:latest
+        ports:
+        - name: http
+          containerPort: 3000
+          protocol: TCP
